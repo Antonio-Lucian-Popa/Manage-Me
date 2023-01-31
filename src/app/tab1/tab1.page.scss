@@ -1,0 +1,53 @@
+.container-welcome {
+  margin-top: 50px;
+  padding-left: 30px;
+  p {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+}
+
+.container-info-home {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .container-cards {
+    margin-top: 50px;
+    mat-card {
+      width: 150px;
+      height: 150px;
+      background-color: white;
+
+      mat-card-content {
+        height: 100%;
+        ion-icon, span, p {
+          color: black;
+        }
+
+        ion-icon {
+          font-size: 35px;
+        }
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.container-reminder-home {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .container-post {
+    padding-top: 40px;
+  }
+}

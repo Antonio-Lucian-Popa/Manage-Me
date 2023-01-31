@@ -1,0 +1,46 @@
+<div class="container-post mt-3">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{post.price}}
+        </mat-panel-title>
+        <mat-panel-description>
+          Status: &nbsp; <span [ngClass]="post.status === 0 ? 'status-incarcat' : 'status-de-incarcat'">{{post.status === 0 ? 'Incarcat' : 'De Incarcat'}}</span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-divider></mat-divider>
+      <div class="container-locations mt-4">
+        <ul class="bar">
+          <li class="start-location">{{post.startLocation}}</li>
+          <li>{{post.endLocation}}</li>
+        </ul>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="container-parcel-detail">
+        <table id="detail">
+          <tr>
+            <th>Marfa</th>
+            <th>Cantitate</th>
+            <th>Dimensiuni</th>
+          </tr>
+          <tr *ngFor="let parcel of post.parcel">
+            <td>{{parcel.name}}</td>
+            <td>{{parcel.quantity}}</td>
+            <td>{{parcel.dimension}}</td>
+          </tr>
+        </table>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="container-actions d-flex align-items-center justify-content-end mt-4">
+        <button class="btn-action">
+          <ion-icon name="checkmark-outline" class="complete-task"></ion-icon>
+        </button>
+        <button class="btn-action">
+          <ion-icon name="trash-outline" class="delete-task"></ion-icon>
+        </button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>

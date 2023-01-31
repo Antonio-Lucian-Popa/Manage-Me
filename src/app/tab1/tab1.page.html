@@ -1,9 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -13,5 +9,41 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="d-flex flex-column align-items-start justify-content-center container-welcome">
+    <span class="welcome-message">Salut, Adrian 👋</span>
+    <p>Buna dimineata</p>
+  </div>
+
+  <div class="container-info-home">
+    <h6>Am pentru tine aceste informatii</h6>
+
+    <div class="container-cards d-flex align-items-center justify-content-between flex-wrap">
+      <mat-card>
+        <mat-card-content class="d-flex flex-column align-items-center justify-content-around">
+          <ion-icon name="card-outline"></ion-icon>
+          <span>30.000</span>
+          <p>Catigat pana acum</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content class="d-flex flex-column align-items-center justify-content-around">
+          <ion-icon name="cube-outline"></ion-icon>
+          <span>12</span>
+          <p>Colete saptamana
+            aceasta</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="container-reminder-home">
+    <span>Pentru astazi ai de
+      predat aceste marfuri</span>
+
+      <div class="container-post">
+        <app-post [post]="post" *ngFor="let post of posts"></app-post>
+      </div>
+  </div>
+
 </ion-content>

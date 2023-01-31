@@ -1,0 +1,78 @@
+.status-incarcat {
+  color: greenyellow;
+}
+
+.status-de-incarcat {
+  color: #ff6161;
+}
+
+.container-locations {
+  .bar {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .bar >li {
+    position: relative;
+  }
+  .bar>li:before {
+    content: '\25CF';
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  .bar>li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    border-left: 2px solid rgb(255, 255, 255);
+    margin-left: 5px;
+    height: 100%;
+    //height: 50px;
+  }
+  .bar >li:first-of-type:after {
+    top: 50%;
+  }
+  .bar >li:last-of-type:after {
+    top: -50%;
+  }
+
+}
+
+.start-location {
+  margin-bottom: 29px;
+}
+
+mat-divider {
+  margin-top: 15px;
+}
+
+.container-parcel-detail {
+  margin-top: 15px;
+}
+
+#detail {
+  width: 100%;
+}
+
+.container-actions {
+  .btn-action {
+    border: none;
+    background-color: transparent;
+    ion-icon {
+      font-size: 25px;
+    }
+  }
+
+  .btn-action:first-child {
+    margin-right: 15px;
+  }
+
+  .complete-task {
+    color: greenyellow;
+  }
+
+  .delete-task {
+    color: #ff6161;
+  }
+}
